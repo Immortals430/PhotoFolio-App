@@ -1,0 +1,56 @@
+@media screen and (max-width: 825px) {
+    nav{
+      padding: 2rem 0rem 0;
+    }
+
+    nav > div{
+      justify-content: center;
+      
+    }
+    main {
+      width: 100vw;
+      padding: 2rem 1rem 3rem;
+    }
+
+    .header{
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .header > div > div{
+      text-align: center;
+    }
+
+    .header > div, .imageList-header {
+      flex-flow: column;
+    }
+
+    .imageLsit-input-container, .upDateForm, .form{
+      text-align: center;
+      justify-content: center;
+   
+    }
+    .upDateForm, .imageLsit-input-container, .form {
+      flex-flow: column;
+    }
+
+    .input input{
+      width: 100%;
+    }
+
+    .form > div{
+      flex-flow: column;
+      width: 80%;
+      margin: auto;
+    }
+
+    .image{
+      width: 90%;
+    }
+
+    .next, .prev{
+      top: calc(100% - 60%);
+    }
+   
+  }

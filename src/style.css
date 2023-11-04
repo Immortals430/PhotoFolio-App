@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Cormorant:wght@300&family=Sen&display=swap');
+
+
+/* global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.flex{
+    display: flex;
+}
+
+body{
+    padding: 7rem 0 0;
+}
+
+.hcenter{
+    justify-content: center;
+}
+
+.vcenter{
+    align-items: center;
+}
+
+a{
+    color: #560238;
+}
+
+input{
+    font-family: sen, sans-serif;
+    padding: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+button{
+    color: white;
+    background-color: #560238;
+    font-family: 'Sen', sans-serif;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main{
+    padding: 2rem 3rem 3rem;
+    width: 80vw;
+    margin: auto;
+}
+
+.header{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section{
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    font-weight: bold; 
+
+}
+
+
+.card-wrapper{
+    background: black;
+    width: 250px;
+    height: 130px;
+    margin: 1rem;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    flex-flow: column;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+  }
+
+  .card-opaque{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.card-opaque:hover ~ .title {
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.card > div{
+    transition: font-size 0.2s linear;
+    /* position: absolute; */
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    color: white;
+    z-index: 5;
+}
+
+.card > .download{
+    position: absolute;
+    left: -4%;
+    top: -10%;
+    font-size: 1.2rem;
+    color: rgb(11, 255, 11);
+    transition: font-size 0.2s linear;
+}
+
+.card > .delete {
+    position: absolute;
+    right: -4%;
+    top: -10%;
+    font-size: 1.2rem;
+    color: red;
+    transition: font-size 0.2s linear;
+}
+
+.card > .edit{
+    position: absolute;
+    right: 6%;
+    top: -10%;
+    font-size: 1.2rem;
+    color: blue;
+    transition: font-size 0.2s linear;
+}
+
+.card > span:hover{
+    color: #f40097;
+}
+
+.form {
+    margin: 0 2rem;
+    padding: 1rem 0;
+    background-image: linear-gradient(to right, white,#faeefa, white);
+    gap: 3rem ;
+    flex-wrap: wrap;
+}
+
+.form > div {
+    gap: 1rem;
+}
+
+.input{
+    position: relative;
+}
+
+.input > span{
+    position: absolute;
+    top: 0;
+    right: 1px;
+    height: 100%;
+}
+
+.form-container{
+    align-items: center;
+}
+
+
+/* ImageLsit */
+.imageList-header > div > * {
+    margin: 0.5rem;
+}
+
+.upDateForm{
+    margin: 0 2rem;
+    padding: 1rem 0;
+    background-image: linear-gradient(to right, white,#faeefa, white);
+    gap: 3rem ;
+}
+
+
+/* NavBar */
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: center;
+    font-family: 'Cormorant', serif;
+    width: 100vw;
+    padding: 2rem 4rem 0;
+    background: white;
+    z-index: 1;
+}
+
+nav > div{
+    color: #560238;
+    font-size: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#logo{
+    font-size: 1em;
+    text-decoration: none;
+}
+
+nav a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+}
+
+nav > div > div {
+    justify-content: center;
+    align-items: center;
+}
+
+hr { 
+    margin-top: 1rem;
+}
+
+
+/* carousel */
+.carousel-background{   
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.505);  
+    z-index: 6;  
+    top: 0;
+    left: 0;
+    color:aliceblue;
+}
+
+.image{
+    width: 60%;
+    position: relative;
+    flex-flow: column;
+}
+
+ .image >  span{
+    position: absolute;
+    color: white;
+}
+
+.image img {
+    max-width: 100%;
+    margin: auto;
+    display: block;
+} 
+
+.prev{
+    left: 0;
+    top: calc(100% - 55%);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.71);
+    cursor: pointer;
+}
+
+.next{
+    right: 0;
+    top: calc(100% - 55%);
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0.71);
+    cursor: pointer;
+}
+
+.carousel-title{
+    bottom: 3%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.253);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.253), rgba(255, 255, 255, 0));
+    font-size: 2rem;
+    z-index: 5;
+}
+
+.carousel-back{
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+
+
